@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Centered Links and Logo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Source Sans Light", Arial, sans-serif; /* Use Source Sans Light font */
+            font-weight: 300; /* Light font weight */
+            background-color: #231F20; /* Set background color */
+            color: #fff; /* Set text color */
+        }
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; /* Required for positioning */
+        }
+        nav {
+            text-align: left; /* Align links to the left */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .logo img {
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .title {
+            text-align: center; /* Center align the title */
+            color: #FFAC65; /* Set title color */
+        }
+        .description {
+            text-align: center; /* Center align the description */
+            margin-top: 20px; /* Add some space between title and description */
+        }
+        .full-width-image {
+            width: 100%; /* Make the image span full width */
+            display: block; /* Ensure the image behaves as a block element */
+        }
+        .sub-title {
+            text-align: center; /* Center align the subtitle */
+            color: #FFAC65; /* Set subtitle color */
+            margin-top: 20px; /* Add some space between image and subtitle */
+        }
+        .paragraph-container {
+            display: flex; /* Use flexbox to align paragraphs */
+            justify-content: center; /* Center the paragraphs horizontally */
+            margin-top: 20px; /* Add some space between subtitle and paragraphs */
+            position: relative; /* Required for positioning */
+        }
+        .left-paragraph,
+        .right-paragraph {
+            text-align: left; /* Align text to the left */
+            margin: 0 150px; /* Add margin to separate paragraphs */
+            position: relative; /* Required for positioning */
+        }
+        .left-paragraph::before,
+        .right-paragraph::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px; /* Width of the line */
+            background-color: #D33030; /* Red color */
+        }
+        .left-paragraph::before {
+            left: -10px; /* Adjust the left position to make it align with paragraphs */
+        }
+        .right-paragraph::before {
+            right: -10px; /* Adjust the right position to make it align with paragraphs */
+        }
+
+        /* Adjustments for moving down */
+        .sub-title,
+        .left-paragraph,
+        .right-paragraph {
+            margin-top: 70px; /* Move down by 70px */
+        }
+
+        /* Image style */
+        .rounded-image {
+            width: 600px; /* Set width */
+            height: 400px; /* Set height */
+            display: block; /* Ensure it behaves as a block element */
+            margin: 0 auto 0; /* Positioning */
+            border-radius: 20px; /* Rounded edges */
+            margin-left: 100px; /* Move 100px from the left side of the viewport */
+            margin-top: 300px; /* Move 300px from the paragraphs */
+        }
+
+        .rounded-image-second {
+            width: 700px; /* Set width */
+            height: auto; /* Set height */
+            display: block; /* Ensure it behaves as a block element */
+            margin: 100px auto 0 calc(100vw - 800px); /* Center horizontally, 100px from top, and 100px from right */
+            border-radius: 20px; /* Rounded edges */
+        }
+
+        .rounded-image-third {
+            width: 600px; /* Set width */
+            height: auto; /* Set height */
+            display: block; /* Ensure it behaves as a block element */
+            margin: 100px auto 0 100px; /* Center horizontally, 100px from top, and 100px from left */
+            border-radius: 20px; /* Rounded edges */
+        }
+
+        /* New Paragraph Style */
+        .new-paragraph {
+            position: absolute;
+            top: calc(300px + 20px); /* Adjust as needed to position it vertically */
+            left: calc(100px + 600px + 100px + 100px + 50px); /* Position it 50px to the right of the rounded image */
+            width: 300px; /* Adjust width as needed */
+            color: #fff; /* Set text color */
+            font-size: 16px; /* Set font size */
+        }
+
+        /* Button style */
+        .button {
+            display: block;
+            width: 560px;
+            height: 120px;
+            background-color: #E1995B;
+            text-align: center;
+            line-height: 120px; /* Center text vertically */
+            border-radius: 10px;
+            margin: 20px auto; /* Center horizontally */
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="Logo.png" alt="Your Logo">
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Articles</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Title -->
+<h1 class="title">The city of culture</h1>
+
+<!-- Description -->
+<p class="description">Madrid, the vibrant capital of Spain,<br>is an enchanting destination that effortlessly blends<br>rich history with modern sophistication.</p>
+
+<!-- Full-width Image -->
+<img class="full-width-image" src="madw.jpg" alt="Full Width Image">
+
+<!-- Subtitle -->
+<h1 class="sub-title">Places to visit</h1>
+
+<!-- Paragraphs -->
+<div class="paragraph-container">
+    <!-- Left Paragraph -->
+    <p class="left-paragraph">Madrid boasts an abundance of cultural treasures,<br> including world-class museums like the Prado Museum,<br> showcasing masterpieces by Goya, Velázquez, and El Greco.<br> The Reina Sofía Museum houses iconic works of modern art,<br> including Picasso's renowned "Guernica."</p>
+
+    <!-- Right Paragraph -->
+    <p class="right-paragraph">From grandiose palaces like the Royal Palace to elegant squares<br> like Plaza Mayor and Puerta del Sol,<br> Madrid's architecture is a testament to its storied past.<br> Wander through the winding streets of the historic center<br> to discover hidden gems at every turn.</p>
+</div>
+
+<!-- Rounded Edges Image -->
+<img class="rounded-image" src="image 1.jpg" alt="Rounded Edges Image">
+
+<!-- Second Rounded Edges Image -->
+<img class="rounded-image-second" src="image 2.jpg" alt="Second Rounded Edges Image">
+
+<!-- Third Rounded Edges Image -->
+<img class="rounded-image-third" src="image 3.jpg" alt="Third Rounded Edges Image">
+
+<!-- Button -->
+<a href="#" class="button">Read More</a>
+
+<!-- Your content goes here -->
+<div style="height: 2000px;"> <!-- Just for demonstration purposes, you can remove this -->
+</div>
+
+</body>
+</html>
+
